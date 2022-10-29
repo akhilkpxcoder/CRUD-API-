@@ -14,8 +14,8 @@ const swaggerUI = require("swagger-ui-express");
 // swaggerDocument = require("./swagger.json");
 // app.use(
 //   '/api-docs',
-//   swaggerUi.serve, 
-//   swaggerUi.setup(swaggerDocument)
+//   swaggerUI.serve, 
+//   swaggerUI.setup(swaggerDocument)
 // );
 
 mongoose
@@ -26,23 +26,6 @@ mongoose
 app.use(cors());
 app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
-// var options = {
-//   explorer: true,
-//   swaggerOptions: {
-//     authAction: {
-//       JWT: {
-//         name: 'JWT',
-//         schema: {
-//           type: 'apiKey',
-//           in: 'header',
-//           name: 'Authorization',
-//           description: ''
-//         },
-//         value: 'Bearer <my own JWT token>'
-//       }
-//     }
-//   }
-// };
 
 app.use('/api-docs',swaggerUI.serve,swaggerUI.setup(docs));
 app.use('/api/users', users);
