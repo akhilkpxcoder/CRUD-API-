@@ -1,6 +1,5 @@
-const mongoose = require('mongoose')
-const url ='mongodb://localhost:27017/crudapi';
+const dbcon = "mongodb://localhost:27017/crudapi";
 
-
-
-module.exports = { mongoose, url };
+module.exports = {
+  dbcon,
+};
