@@ -18,6 +18,6 @@ router.get("/:username",auth, userGetByUsernameController);
 
 router.delete('/:username',auth, userDeleteByUsernameController);
 
-router.patch('/',auth, userUpdateByUsernameController);
+router.put('/',auth, userUpdateByUsernameController);
 
 module.exports = router;

@@ -26,25 +26,25 @@ mongoose
 app.use(cors());
 app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
-var options = {
-  explorer: true,
-  swaggerOptions: {
-    authAction: {
-      JWT: {
-        name: 'JWT',
-        schema: {
-          type: 'apiKey',
-          in: 'header',
-          name: 'Authorization',
-          description: ''
-        },
-        value: 'Bearer <my own JWT token>'
-      }
-    }
-  }
-};
+// var options = {
+//   explorer: true,
+//   swaggerOptions: {
+//     authAction: {
+//       JWT: {
+//         name: 'JWT',
+//         schema: {
+//           type: 'apiKey',
+//           in: 'header',
+//           name: 'Authorization',
+//           description: ''
+//         },
+//         value: 'Bearer <my own JWT token>'
+//       }
+//     }
+//   }
+// };
 
-app.use('/api-docs',swaggerUI.serve,swaggerUI.setup(docs,options));
+app.use('/api-docs',swaggerUI.serve,swaggerUI.setup(docs));
 app.use('/api/users', users);
 app.use('/api/login', login);
 app.get("/", (req, res) => res.send("Welcome to the Users API!"));
