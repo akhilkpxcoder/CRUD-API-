@@ -1,6 +1,11 @@
 module.exports = {
     // operation's method
     put: {
+        security: [
+            {
+              bearerAuth: [],
+            },
+          ],
       tags: ["User CRUD operations"], // operation's tag
       description: "Update User", // short desc
       operationId: "updateUser", // unique operation username

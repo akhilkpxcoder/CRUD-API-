@@ -1,6 +1,11 @@
 module.exports = {
     // operation's method
     get: {
+        security: [
+            {
+              bearerAuth: [],
+            },
+          ],
       tags: ["User CRUD operations"], // operation's tag.
       description: "Get a User", // operation's desc.
       operationId: "getUser", // unique operation username
@@ -43,11 +48,5 @@ module.exports = {
           },
         },
       },
-      security: {
-        bearerAuth:{
-             write:"users",
-             read:"users"
-        }
-      }
     },
   };

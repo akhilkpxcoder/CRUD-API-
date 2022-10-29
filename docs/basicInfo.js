@@ -9,8 +9,5 @@ module.exports = {
       email: "akhilkp@gmail.com", // your email
       url: "web.com", // your website
     },
-  },
-  security: [{
-    bearerAuth: []
-}]
+  }
 };
