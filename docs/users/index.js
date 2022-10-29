@@ -1,4 +1,4 @@
-const getUsers = require('./getUser');
+const getUsers = require('./getUsers');
 const getUser = require('./getUser');
 const createUser = require('./createUser');
 const updateUser = require('./updateUser');
